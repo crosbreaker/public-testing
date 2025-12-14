@@ -1,3 +1,6 @@
+on: workflow_dispatch
+name: build
+
 jobs:
   build:
     permissions:
