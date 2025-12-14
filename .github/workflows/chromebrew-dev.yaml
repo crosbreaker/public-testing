@@ -26,10 +26,11 @@ jobs:
         run: |
           set -x
           curl -SLOk "https://web.archive.org/web/20230428160204if_/https://dl.sh1mmer.me/build-tools/chromebrew/chromebrew-dev.tar.gz"
+          curl -SLOk "https://web.archive.org/web/20230324140756id_/https://dl.sh1mmer.me/build-tools/chromebrew/chromebrew.tar.gz"
           ls -a
       - name: create release
         uses: ading2210/gh-large-releases@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: chromebrew*.tar.gz
+          files: *.tar.gz
           make_latest: true
